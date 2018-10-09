@@ -1,0 +1,71 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MainWindow" Height="454" Width="731">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="140*" />
+            <ColumnDefinition Width="130*" />
+            <ColumnDefinition Width="80*" />
+            <ColumnDefinition Width="140" />
+        </Grid.ColumnDefinitions>
+        
+        <Menu Grid.ColumnSpan="5" Margin="5">
+            <MenuItem Header="Datei">
+                <MenuItem Header="Beenden" Name="MenuItemBeenden" Click="MenuItemBeenden_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        <TextBlock Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" HorizontalAlignment="Center" 
+                   Name="TextBlock1" Text="ImageResizer" FontSize="24" FontWeight="Bold" />
+        
+        <ListBox Name="FilenamesListBox" Grid.ColumnSpan="5" Grid.Row="2" Margin="4"></ListBox>
+        
+        <Button Name="AddImagesButton" Grid.Row="3" Grid.Column="4" Content="Bilder hinzufügen..." Margin="4"></Button>
+        <Button Name="ChooseOutputFolderButton" Grid.Row="4" Grid.Column="4" Content="Ausgabeordner.." Margin="4" Click="ChooseOutputFolderButton_Click"></Button>
+        <Button Name="StartButton" Grid.Row="5" Grid.Column="4" Content="Start!" Margin="4" Click="StartButton_Click"></Button>
+        
+        <Label Content="Neue X-Auflösung:" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"></Label>
+        <Label Content="Ausgabeordner:" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"></Label>
+        <Label Content="Postfix:" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"></Label>
+        <Label Content="Neues Bildformat:" Grid.Row="3" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"></Label>
+        
+        <TextBox Name="X_ResTextBox" Grid.Row="3" Grid.Column="1" Text="1024" Margin="4,6,0,6" VerticalContentAlignment="Center"></TextBox>
+        <TextBox Name="OutputFolderTextBox" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Margin="4,6" VerticalContentAlignment="Center"></TextBox>
+        <TextBox Name="PostfixTextBox" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Text="_klein" Margin="4,6" VerticalContentAlignment="Center"></TextBox>
+
+        <ComboBox Grid.Column="3" Grid.Row="3" Name="FormatComboBox" Margin="4" 
+                  VerticalContentAlignment="Center">
+            <ComboBoxItem>.jpg</ComboBoxItem>
+            <ComboBoxItem>.bmp</ComboBoxItem>
+            <ComboBoxItem>.png</ComboBoxItem>
+            <ComboBoxItem>.tif</ComboBoxItem>
+        </ComboBox>
+
+        <StatusBar Grid.ColumnSpan="5" Grid.Row="6" Name="StatusBar1">
+            <StatusBarItem>
+                <TextBlock Text="Gesamtfortschritt:"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <ProgressBar Height="20" Width="150" Name="TotalProgressBar" />
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock Text="Aktuelle Datei:" Name="CurrentFileTextBlock" />
+            </StatusBarItem>
+        </StatusBar>
+
+    </Grid>
+</Window>
+
+
+    

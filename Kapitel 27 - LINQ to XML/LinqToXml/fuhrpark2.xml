@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<fuhrpark>
+  <fahrzeug>
+    <kennzeichen>MS-VB 2008</kennzeichen>
+    <hersteller>MAN</hersteller>
+    <ladung menge="10000">Salz</ladung>
+  </fahrzeug>
+  <fahrzeug>
+    <kennzeichen>MS-C# 2008</kennzeichen>
+    <hersteller>Mercedes-Benz</hersteller>
+    <ladung menge="20000">Erdnüsse</ladung>
+  </fahrzeug>
+  <fahrzeug>
+    <kennzeichen>MS-J# 2008</kennzeichen>
+    <hersteller>DAF</hersteller>
+    <ladung menge="5000">Wackeldackel</ladung>
+  </fahrzeug>
+</fuhrpark>

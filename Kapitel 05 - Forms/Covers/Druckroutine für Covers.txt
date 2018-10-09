@@ -1,0 +1,170 @@
+Imports System.Drawing
+Imports System.Drawing.Drawing2D
+Imports System.Drawing.Printing
+
+Public Class Form2
+
+    Private WithEvents myPrintDocument As New PrintDocument
+    Private myInhalt As CoverInhalt
+
+    Public Function DialogDarstellen(ByVal Inhalt As CoverInhalt) As DialogResult
+
+        'Die übergebenen Werte der ganzen Klasse zugänglich machen
+        myInhalt = Inhalt
+
+        'Das folgende Objekt brauchen wir zum Vorschau Darstellen und 
+        'Drucken; in ihm wird der Inhalt gerendet 
+        '(egal, wo er dann "hingeht" - auf einen Drucker oder ins Vorschaufenster).
+        myPrintDocument = New PrintDocument
+
+        'Standard-Seiteneinstellungen verwenden, aber im Querformat (Landscape)
+        'drucken, da das Cover sonst nicht auf die Seite passt.
+        myPrintDocument.DefaultPageSettings.Landscape = True
+
+        'Ausgabe rendern:
+        'Dazu dem Preview-Steuerelement einfach das PrintDocument-Objekt zuweisen.
+        'Sobald die Zuweisung erfolgte, wird das PrintPage-Ereignis des PrintDocument-
+        'Objektes ausgelöst - für jede zu rendernde Seite einmal.
+        PrintPreviewControl1.Document = myPrintDocument
+
+        'Dieser Dialog stellt sich schließlich selbst dar - und zwar modal.
+        'Darunter die Formulare sind nicht mehr bedienbar, und dieser Dialog
+        'bekommt für die Zeit seiner Darstellung eine eigene Windows-Ereignis-Queue.
+        Me.ShowDialog()
+    End Function
+
+    Private Sub btnDruckAufStandarddrucker_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDrucken.Click
+
+        'Den Anwender den Drucker auswählen lassen
+        Dim locPD As New PrintDialog()
+        Dim locDR As DialogResult = locPD.ShowDialog()
+        If locDR = Windows.Forms.DialogResult.Cancel Then
+            Return
+        End If
+
+        'Drucken anschmeißen. Für jede zu druckende Seite wird dann
+        'ein Ereignis ausgelöst.
+        myPrintDocument = New PrintDocument
+        myPrintDocument.PrinterSettings = locPD.PrinterSettings
+        myPrintDocument.DefaultPageSettings.Landscape = True
+        myPrintDocument.Print()
+    End Sub
+
+    Private Sub myPrintDocument_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles myPrintDocument.PrintPage
+
+        Dim g As Graphics = e.Graphics
+        g.PageUnit = GraphicsUnit.Millimeter
+
+        'Die Fonts für die Texte definieren
+        'TODO: Man könnte die Fonts vorschlagsweise auch vom Anwender einstellen lassen
+        Dim locFontHaupttitel As New Font(FontFamily.GenericSansSerif, 48, FontStyle.Bold)
+        Dim locFontUntertitel As New Font(FontFamily.GenericSansSerif, 24, FontStyle.Bold)
+        Dim locFontRückensteg As New Font(FontFamily.GenericSansSerif, 18, FontStyle.Bold)
+        Dim locFontFließtext As New Font(FontFamily.GenericSerif, 12, FontStyle.Regular)
+
+        'Offsets einrichten, damit nicht direkt am rechten, oberen Rand gedruckt wird.
+        Dim locOffset_X As Single = 10.0F  ' 10 mm rechts und
+        Dim locOffset_Y As Single = 10.0F  ' 10 mm oben
+
+        'Die linke Seite (die Rückseite) zeichnen
+
+        'Dazu brauchen wird zunächst einen 0.25 mm breiten Pen, der schwarz malt.
+        Dim locPen As New Pen(Color.Black, 0.25F)
+
+        'Und jetzt das 1. Rechteck malen mit den Ausmaßen 13,0 x 18,3 cm
+        g.DrawRectangle(locPen, locOffset_X, locOffset_Y, 130.0F, 183.0F)
+
+        'Dann das zweite Rechteck malen mit den Ausmaßen 1,3 x 18,3 - das ist der Steg
+        'das bereits gemalte Rechteck (links davon) muss bei den Koordinaten 
+        'natürlich berücksichtigt werden
+        g.DrawRectangle(locPen, locOffset_X + 130.0F, locOffset_Y, 13.0F, 183.0F)
+
+        'Schließlich das dritte Rechteck malen, das so groß wie das erste ist.
+        g.DrawRectangle(locPen, locOffset_X + 130.0F + 13.0F, locOffset_Y, 130.0F, 183.0F)
+
+        'Rückentext beschriften. Dazu brauchen wird zunächst
+        'ein String-Format-Objekt, das die Ausrichtung vorgibt.
+        Dim locStringFormat As StringFormat = DirectCast(StringFormat.GenericTypographic.Clone, StringFormat)
+
+        'Vertikal zentriert (Abstand oben zu unten)
+        locStringFormat.LineAlignment = StringAlignment.Center
+        'Vertikal zentriert (Abstand links zu rechts)
+        locStringFormat.Alignment = StringAlignment.Center
+
+        'Titel (oberes Drittel) in Untertitelschrift, u.U. mehrzeilig
+        'und zentriert.
+        g.DrawString(myInhalt.FilmTitel, locFontUntertitel, Brushes.Black, _
+                New RectangleF(locOffset_X, locOffset_Y, 130.0F, 183.0F / 3.0F), _
+                locStringFormat)
+
+        'darunter die Beschreibung (untere zwei Drittel), zentriert, am unteren Rand liegend.
+        '(wir schreiben von links nach rechts, da ist "Near" linksbündig).
+        locStringFormat.LineAlignment = StringAlignment.Far
+        g.DrawString(myInhalt.Beschreibung, locFontFließtext, Brushes.Black, _
+                New RectangleF(locOffset_X, locOffset_Y + 183.0F / 3.0F, 130.0F, 183.0F / 2.0F), _
+                locStringFormat)
+
+        'Und jetzt der Haupttitel mit den Schauspielern.
+
+        'Da malen wir, falls eines existiert, erstmal das Coverbild
+        If myInhalt.Coverbild IsNot Nothing Then
+            With myInhalt.Coverbild
+                g.DrawImage(myInhalt.Coverbild, _
+                    New RectangleF(locOffset_X + 130.0F + 13.0F, locOffset_Y, 130.0F, 183.0F), _
+                    New RectangleF(0, 0, .Width, .Height), _
+                    GraphicsUnit.Pixel)
+            End With
+        End If
+
+        'zentriert auf der Front. Dazu müssen wir beide Textlängen
+        'ausmessen und dann "zu Fuß" auf der Seite zentrieren.
+        Dim locHauptTitelHoehe As Single
+        Dim locSchauspielerHoehe As Single
+        'Diese Variable brauchen wir zum Messen. Da wir die Höhe wissen wollen,
+        'setzen wir für die Höhe 0 ein.
+        Dim locAusgabeAusmasse As New SizeF(130.0F, 0.0F)
+
+        locAusgabeAusmasse = g.MeasureString(myInhalt.FilmTitel, locFontHaupttitel, locAusgabeAusmasse)
+        locHauptTitelHoehe = locAusgabeAusmasse.Height
+
+        'Dasselbe für die Schauspielernennungen
+        locAusgabeAusmasse = New SizeF(130.0F, 0.0F)
+        locAusgabeAusmasse = g.MeasureString(myInhalt.Schauspieler, locFontUntertitel, locAusgabeAusmasse)
+        locSchauspielerHoehe = locAusgabeAusmasse.Height
+
+        'Haupttitel rendern: Zentriert in beiden Dimensionen.
+        locStringFormat.LineAlignment = StringAlignment.Center
+        locStringFormat.Alignment = StringAlignment.Center
+
+        g.DrawString(myInhalt.FilmTitel, locFontHaupttitel, Brushes.LightGray, _
+            New RectangleF( _
+                locOffset_X + 130.0F + 13.0F, _
+                locOffset_Y + (183.0F / 2.0F - (locHauptTitelHoehe + 10.0F + locSchauspielerHoehe) / 2.0F), _
+                130.0F, _
+                locHauptTitelHoehe), _
+            locStringFormat)
+
+        'Autoren darunter
+        g.DrawString(myInhalt.Schauspieler, locFontUntertitel, Brushes.Black, _
+            New RectangleF( _
+                locOffset_X + 130.0F + 13.0F, _
+                locOffset_Y + (183.0F / 2.0F - (locHauptTitelHoehe + 10.0F + locSchauspielerHoehe) / 2.0F) _
+                    + 10.0F + locHauptTitelHoehe, _
+                130.0F, _
+                locSchauspielerHoehe), _
+            locStringFormat)
+
+        'Jetzt noch den Rückensteg schreiben:
+        'Dazu muss der Text um 90 Grad gedreht werden.
+        'Zentrierungen in beiden Dimensionen bleiben.
+        locStringFormat.FormatFlags = StringFormatFlags.DirectionVertical
+        g.DrawString(myInhalt.FilmTitel, locFontRückensteg, Brushes.Black, _
+                New RectangleF(locOffset_X + 130.0F, locOffset_Y, 13.0F, 183.0F), _
+                locStringFormat)
+
+    End Sub
+
+    Private Sub btnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
+        Me.DialogResult = Windows.Forms.DialogResult.OK
+    End Sub
+End Class

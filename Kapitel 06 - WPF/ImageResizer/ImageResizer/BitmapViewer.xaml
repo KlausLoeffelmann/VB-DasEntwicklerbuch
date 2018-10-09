@@ -1,0 +1,11 @@
+﻿<Window x:Class="BitmapViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="BitmapViewer" Height="448" Width="656" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Visible" >
+            <Image Name="PreviewImage" Stretch="None" />
+        </ScrollViewer>
+
+    </Grid>
+</Window>

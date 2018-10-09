@@ -1,0 +1,62 @@
+﻿<Window x:Class="NormApp.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Normale Applikation" Height="450" Width="620"
+    >
+    <Window.Resources>
+        <!-- Graphics resources for the ToolBar -->
+
+        <Path x:Key="new" Fill="Aquamarine"   Stroke="Black" StrokeThickness="1"
+        Data="M 3,1 L 3,12 12,12 12,1 z M 8,1 L 12,5" />
+
+        <Path x:Key="back" Fill="Cyan" Stroke="Black" StrokeThickness="1"
+          Data="M 0,7 L 5,2 5,5 13,5 13,9 5,9 5,12 z" />
+
+        <Path x:Key="forward" Fill="Cyan" Stroke="Black" StrokeThickness="1"
+        Data="M 13,7 L 7,2 7,5 0,5 0,9 7,9 7,12 z" />
+
+        <Path x:Key="prev" Fill="Cyan" Stroke="Black" StrokeThickness="1"
+        Data="M 7,0 L 2,5 5,5 5,13 9,13 9,5 12,5 z" />
+
+        <Path x:Key="next" Fill="Cyan" Stroke="Black" StrokeThickness="1"
+        Data="M 7,13 L 2,7 5,7 5,0 9,0 9,7 12,7 z" />
+
+        <Path x:Key="exit" Fill="Red" Stroke="Black" StrokeThickness="1"
+      Data="M 7,13 L 2,7 5,7 5,0 9,0 9,7 12,7 z" />
+    </Window.Resources>
+
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Datei">
+                <MenuItem Header="Neu..."/>
+                <Separator />
+                <MenuItem Header="Dialog..." Name="menuDiag" Click="menuDiag_Click"/>
+                <Separator />
+                <MenuItem Header="Beenden" Name="menuExit" Click="menuExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Bearbeiten"/>
+            <MenuItem Header="Ansicht"/>
+            <MenuItem Header="Fenster"/>
+            <MenuItem Header="Hilfe"/>
+        </Menu>
+
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Content="{StaticResource new}" />
+                <Button Content="{StaticResource back}" />
+                <Button Content="{StaticResource forward}" />
+                <ComboBox Width="100" />
+                <Button Content="{StaticResource prev}" />
+                <Button Content="{StaticResource next}" />
+                <Separator />
+                <Button Content="{StaticResource exit}" Name="buttonExit" Click="menuExit_Clicked"/>
+            </ToolBar>
+        </ToolBarTray>
+
+        <StatusBar DockPanel.Dock="Bottom">Fertig</StatusBar>
+
+        <TextBlock Background="LightGray">
+      Hier wird der Inhalt dargestellt....
+    </TextBlock>
+    </DockPanel>
+</Window>

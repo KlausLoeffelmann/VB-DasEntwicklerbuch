@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DictionaryDemo", "DictionaryDemo\DictionaryDemo.vbproj", "{9F04E1A9-B10B-4989-833F-992F777E7CEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F04E1A9-B10B-4989-833F-992F777E7CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F04E1A9-B10B-4989-833F-992F777E7CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F04E1A9-B10B-4989-833F-992F777E7CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F04E1A9-B10B-4989-833F-992F777E7CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

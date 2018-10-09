@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="modelFirst.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="modelFirstStoreContainer">
+    <EntitySet Name="Mitarbeiter" EntityType="modelFirst.Store.Mitarbeiter" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Projekte" EntityType="modelFirst.Store.Projekte" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Mitarbeiter_Entwickler" EntityType="modelFirst.Store.Mitarbeiter_Entwickler" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProjekteMitarbeiter" EntityType="modelFirst.Store.ProjekteMitarbeiter" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="Projektleiter" Association="modelFirst.Store.Projektleiter">
+      <End Role="Projekte" EntitySet="Projekte" />
+      <End Role="Mitarbeiter" EntitySet="Mitarbeiter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjekteMitarbeiter_Projekte" Association="modelFirst.Store.FK_ProjekteMitarbeiter_Projekte">
+      <End Role="Projekte" EntitySet="Projekte" />
+      <End Role="ProjekteMitarbeiter" EntitySet="ProjekteMitarbeiter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjekteMitarbeiter_Mitarbeiter" Association="modelFirst.Store.FK_ProjekteMitarbeiter_Mitarbeiter">
+      <End Role="Mitarbeiter" EntitySet="Mitarbeiter" />
+      <End Role="ProjekteMitarbeiter" EntitySet="ProjekteMitarbeiter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Entwickler_erbt_Mitarbeiter" Association="modelFirst.Store.FK_Entwickler_erbt_Mitarbeiter">
+      <End Role="Mitarbeiter" EntitySet="Mitarbeiter" />
+      <End Role="Entwickler" EntitySet="Mitarbeiter_Entwickler" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Mitarbeiter">
+    <Key>
+      <PropertyRef Name="MitarbeiterID" />
+    </Key>
+    <Property Name="MitarbeiterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nachname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Vorname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Geburtstag" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AngestelltSeit" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Projekte">
+    <Key>
+      <PropertyRef Name="ProjektID" />
+    </Key>
+    <Property Name="ProjektID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Beschreibung" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Kostenstelle" Type="int" Nullable="false" />
+    <Property Name="Leiter_MitarbeiterID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mitarbeiter_Entwickler">
+    <Key>
+      <PropertyRef Name="MitarbeiterID" />
+    </Key>
+    <Property Name="Programmiersprache" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MitarbeiterID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProjekteMitarbeiter">
+    <Key>
+      <PropertyRef Name="MitarbeitAn_ProjektID" />
+      <PropertyRef Name="Mitarbeiter_MitarbeiterID" />
+    </Key>
+    <Property Name="MitarbeitAn_ProjektID" Type="int" Nullable="false" />
+    <Property Name="Mitarbeiter_MitarbeiterID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Projektleiter">
+    <End Role="Projekte" Type="modelFirst.Store.Projekte" Multiplicity="*" />
+    <End Role="Mitarbeiter" Type="modelFirst.Store.Mitarbeiter" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Mitarbeiter">
+        <PropertyRef Name="MitarbeiterID" />
+      </Principal>
+      <Dependent Role="Projekte">
+        <PropertyRef Name="Leiter_MitarbeiterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjekteMitarbeiter_Projekte">
+    <End Role="Projekte" Type="modelFirst.Store.Projekte" Multiplicity="1" />
+    <End Role="ProjekteMitarbeiter" Type="modelFirst.Store.ProjekteMitarbeiter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projekte">
+        <PropertyRef Name="ProjektID" />
+      </Principal>
+      <Dependent Role="ProjekteMitarbeiter">
+        <PropertyRef Name="MitarbeitAn_ProjektID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjekteMitarbeiter_Mitarbeiter">
+    <End Role="ProjekteMitarbeiter" Type="modelFirst.Store.ProjekteMitarbeiter" Multiplicity="*" />
+    <End Role="Mitarbeiter" Type="modelFirst.Store.Mitarbeiter" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Mitarbeiter">
+        <PropertyRef Name="MitarbeiterID" />
+      </Principal>
+      <Dependent Role="ProjekteMitarbeiter">
+        <PropertyRef Name="Mitarbeiter_MitarbeiterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Entwickler_erbt_Mitarbeiter">
+    <End Role="Mitarbeiter" Type="modelFirst.Store.Mitarbeiter" Multiplicity="1" />
+    <End Role="Entwickler" Type="modelFirst.Store.Mitarbeiter_Entwickler" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Mitarbeiter">
+        <PropertyRef Name="MitarbeiterID" />
+      </Principal>
+      <Dependent Role="Entwickler">
+        <PropertyRef Name="MitarbeiterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="modelFirst" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="modelFirstContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Mitarbeiter" EntityType="modelFirst.Mitarbeiter" />
+          <EntitySet Name="Projekte" EntityType="modelFirst.Projekte" />
+          <AssociationSet Name="Projektleiter" Association="modelFirst.Projektleiter">
+            <End Role="Projekte" EntitySet="Projekte" />
+            <End Role="Mitarbeiter" EntitySet="Mitarbeiter" />
+          </AssociationSet>
+          <AssociationSet Name="ProjekteMitarbeiter" Association="modelFirst.ProjekteMitarbeiter">
+            <End Role="Projekte" EntitySet="Projekte" />
+            <End Role="Mitarbeiter" EntitySet="Mitarbeiter" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Mitarbeiter">
+          <Key>
+            <PropertyRef Name="MitarbeiterID" />
+          </Key>
+          <Property Type="Int32" Name="MitarbeiterID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nachname" Nullable="false" />
+          <Property Type="String" Name="Vorname" Nullable="false" />
+          <Property Type="String" Name="Geburtstag" Nullable="false" />
+          <Property Type="String" Name="AngestelltSeit" Nullable="false" />
+          <NavigationProperty Name="Leitet" Relationship="modelFirst.Projektleiter" FromRole="Mitarbeiter" ToRole="Projekte" />
+          <NavigationProperty Name="MitarbeitAn" Relationship="modelFirst.ProjekteMitarbeiter" FromRole="Mitarbeiter" ToRole="Projekte" />
+        </EntityType>
+        <EntityType Name="Projekte">
+          <Key>
+            <PropertyRef Name="ProjektID" />
+          </Key>
+          <Property Type="Int32" Name="ProjektID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Leiter" Relationship="modelFirst.Projektleiter" FromRole="Projekte" ToRole="Mitarbeiter" />
+          <Property Type="String" Name="Beschreibung" Nullable="false" />
+          <Property Type="Int32" Name="Kostenstelle" Nullable="false" />
+          <NavigationProperty Name="Mitarbeiter" Relationship="modelFirst.ProjekteMitarbeiter" FromRole="Projekte" ToRole="Mitarbeiter" />
+        </EntityType>
+        <Association Name="Projektleiter">
+          <End Type="modelFirst.Projekte" Role="Projekte" Multiplicity="*" />
+          <End Type="modelFirst.Mitarbeiter" Role="Mitarbeiter" Multiplicity="1" />
+        </Association>
+        <Association Name="ProjekteMitarbeiter">
+          <End Type="modelFirst.Projekte" Role="Projekte" Multiplicity="*" />
+          <End Type="modelFirst.Mitarbeiter" Role="Mitarbeiter" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Entwickler" BaseType="modelFirst.Mitarbeiter" >
+          <Property Type="String" Name="Programmiersprache" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="modelFirstStoreContainer" CdmEntityContainer="modelFirstContainer">
+    <EntitySetMapping Name="Mitarbeiter">
+      <EntityTypeMapping TypeName="IsTypeOf(modelFirst.Mitarbeiter)">
+        <MappingFragment StoreEntitySet="Mitarbeiter">
+          <ScalarProperty Name="MitarbeiterID" ColumnName="MitarbeiterID" />
+          <ScalarProperty Name="Nachname" ColumnName="Nachname" />
+          <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+          <ScalarProperty Name="Geburtstag" ColumnName="Geburtstag" />
+          <ScalarProperty Name="AngestelltSeit" ColumnName="AngestelltSeit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(modelFirst.Entwickler)">
+        <MappingFragment StoreEntitySet="Mitarbeiter_Entwickler">
+          <ScalarProperty Name="MitarbeiterID" ColumnName="MitarbeiterID" />
+          <ScalarProperty Name="Programmiersprache" ColumnName="Programmiersprache" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projekte">
+      <EntityTypeMapping TypeName="IsTypeOf(modelFirst.Projekte)">
+        <MappingFragment StoreEntitySet="Projekte">
+          <ScalarProperty Name="ProjektID" ColumnName="ProjektID" />
+          <ScalarProperty Name="Beschreibung" ColumnName="Beschreibung" />
+          <ScalarProperty Name="Kostenstelle" ColumnName="Kostenstelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Projektleiter" TypeName="modelFirst.Projektleiter" StoreEntitySet="Projekte">
+      <EndProperty Name="Mitarbeiter">
+        <ScalarProperty Name="MitarbeiterID" ColumnName="Leiter_MitarbeiterID" />
+      </EndProperty>
+      <EndProperty Name="Projekte">
+        <ScalarProperty Name="ProjektID" ColumnName="ProjektID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProjekteMitarbeiter" TypeName="modelFirst.ProjekteMitarbeiter" StoreEntitySet="ProjekteMitarbeiter">
+      <EndProperty Name="Projekte">
+        <ScalarProperty Name="ProjektID" ColumnName="MitarbeitAn_ProjektID" />
+      </EndProperty>
+      <EndProperty Name="Mitarbeiter">
+        <ScalarProperty Name="MitarbeiterID" ColumnName="Mitarbeiter_MitarbeiterID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="modelFirst" DisplayType="false" >
+        <EntityTypeShape EntityType="modelFirst.Mitarbeiter" Width="1.5" PointX="6.375" PointY="1.5" Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="modelFirst.Projekte" Width="1.5" PointX="2" PointY="1.625" Height="1.9802864583333326" />
+        <AssociationConnector Association="modelFirst.Projektleiter">
+          <ConnectorPoint PointX="3.5" PointY="2.5600358072916665" />
+          <ConnectorPoint PointX="6.375" PointY="2.5600358072916665" />
+        </AssociationConnector>
+        <AssociationConnector Association="modelFirst.ProjekteMitarbeiter">
+          <ConnectorPoint PointX="3.5" PointY="2.0575716145833329" />
+          <ConnectorPoint PointX="6.375" PointY="2.0575716145833329" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="modelFirst.Entwickler" Width="2.625" PointX="9.375" PointY="1.625" Height="1.211080729166667" />
+        <InheritanceConnector EntityType="modelFirst.Entwickler" ManuallyRouted="false" >
+          <ConnectorPoint PointX="7.875" PointY="2.2305403645833337" />
+          <ConnectorPoint PointX="9.375" PointY="2.2305403645833337" />
+        </InheritanceConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

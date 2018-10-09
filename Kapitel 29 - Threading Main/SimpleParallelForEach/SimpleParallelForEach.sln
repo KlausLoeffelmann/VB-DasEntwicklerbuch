@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SimpleParallelForEach", "SimpleParallelFor\SimpleParallelForEach.vbproj", "{FF9704D8-265A-4FEC-9777-9E266A06CA1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF9704D8-265A-4FEC-9777-9E266A06CA1E}.Debug|x86.ActiveCfg = Debug|x86
+		{FF9704D8-265A-4FEC-9777-9E266A06CA1E}.Debug|x86.Build.0 = Debug|x86
+		{FF9704D8-265A-4FEC-9777-9E266A06CA1E}.Release|x86.ActiveCfg = Release|x86
+		{FF9704D8-265A-4FEC-9777-9E266A06CA1E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

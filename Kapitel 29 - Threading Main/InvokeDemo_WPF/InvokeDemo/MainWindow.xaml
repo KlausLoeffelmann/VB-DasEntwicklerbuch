@@ -1,0 +1,26 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock Text="Letzten:" Margin="20,5,5,5"></TextBlock>
+            <TextBox Name="PrimesToFindTextBox" Margin="5" Width="50" Text="15"></TextBox>
+            <TextBlock Text="Primzahlen vor" Margin="5"></TextBlock>
+            <TextBox Name="LastPrimeBeforeTextBox" Margin="5" Width="150" Text="1000000"></TextBox>
+            <TextBlock Text="finden" Margin="5"></TextBlock>
+        </StackPanel>
+        
+        <Button Name="StartCalculationButton" Grid.Row="1" Margin="20,5" Content="Jetzt finden!" Click="StartCalculationButton_Click"></Button>
+        
+        <TextBlock Name="InfoLabel" Grid.Row="2" Text="Teste:"  HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+        
+        <ListBox Grid.Row="3" Name="PrimesListBox" Margin="20,5"></ListBox>
+    </Grid>
+</Window>
