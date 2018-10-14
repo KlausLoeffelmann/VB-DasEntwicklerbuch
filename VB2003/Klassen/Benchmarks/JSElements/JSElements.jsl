@@ -1,0 +1,120 @@
+package JSElements;
+
+/**
+ * Zusammenfassung für Class1.
+ */
+public class JSIntElements
+{
+	private	int[] myIntElements;
+
+	public JSIntElements(int AmountOfElements)
+	{
+		myIntElements = new int[AmountOfElements];
+		System.Random locRandom = new System.Random(System.DateTime.get_Now().get_Millisecond());
+
+		for (int locCount=0; locCount<AmountOfElements; locCount++)
+			myIntElements[locCount]= locRandom.Next();
+	}
+
+	public void ShellSort()
+	{
+		int locOutCount, locInCount;
+		int locDelta;
+		int locIntTemp;
+
+		locDelta = 1;
+
+		// Größten Wert der Distanzfolge ermitteln
+		do 
+			locDelta = 3 * locDelta + 1;
+		while (locDelta <= myIntElements.get_Length());
+
+		do
+		{
+			//War einen zu groß, also wieder teilen
+			locDelta /= 3;
+
+			//Shellsort's Kernalgorithmus
+			for (locOutCount = locDelta; locOutCount<myIntElements.get_Length();locOutCount++)
+			{
+				locIntTemp = myIntElements[locOutCount];
+				locInCount = locOutCount;
+				while (myIntElements[locInCount - locDelta] < locIntTemp)
+				{
+					myIntElements[locInCount] = myIntElements[locInCount - locDelta];
+					locInCount = locInCount - locDelta;
+					if (locInCount <= locDelta) break;
+				}
+			
+				myIntElements[locInCount] = locIntTemp;
+			}
+		}
+		while (locDelta != 0);
+	}
+}
+
+public class JSStrElements
+{
+	int cChars=10;
+	private	String[] myStrElements;
+
+	public JSStrElements(int AmountOfElements)
+	{
+		System.Char[] locChars=new System.Char[cChars];
+			
+		myStrElements = new String[AmountOfElements];
+		System.Random locRandom = new System.Random(System.DateTime.get_Now().get_Millisecond());
+
+		for (int locOutCount = 0; locOutCount<AmountOfElements; locOutCount++)
+		{
+			for (int locInCount=0; locInCount<cChars; locInCount++)
+			{
+				int locIntTemp = (int) (locRandom.NextDouble() * 52);
+				if (locIntTemp > 26) 
+					locIntTemp += 97 - 26;
+				else
+					locIntTemp += 65;
+					
+				locChars[locInCount] = (System.Char) System.Convert.ToChar(locIntTemp);
+			}
+		
+			myStrElements[locOutCount] = new System.String((char[]) locChars);
+		}
+	}
+
+	public void ShellSort()
+	{
+		int locOutCount, locInCount;
+		int locDelta;
+		String locStrTemp;
+
+		locDelta = 1;
+
+		// Größten Wert der Distanzfolge ermitteln
+		do 
+			locDelta = 3 * locDelta + 1;
+		while (locDelta <= myStrElements.get_Length());
+
+		do
+		{
+			//War einen zu groß, also wieder teilen
+			locDelta /= 3;
+
+			//Shellsort's Kernalgorithmus
+			for (locOutCount = locDelta; locOutCount<myStrElements.get_Length();locOutCount++)
+			{
+				locStrTemp = myStrElements[locOutCount];
+				locInCount = locOutCount;
+				while (myStrElements[locInCount - locDelta].CompareTo(locStrTemp)<0)
+				{
+					myStrElements[locInCount] = myStrElements[locInCount - locDelta];
+					locInCount = locInCount - locDelta;
+					if (locInCount <= locDelta) break;
+				}
+			
+				myStrElements[locInCount] = locStrTemp;
+			}
+		}
+		while (locDelta != 0);
+	}
+}

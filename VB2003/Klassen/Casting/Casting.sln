@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Casting", "Casting.vbproj", "{C2AC67B3-4C33-4A52-BDDB-373CBA073EB5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C2AC67B3-4C33-4A52-BDDB-373CBA073EB5}.Debug.ActiveCfg = Debug|.NET
+		{C2AC67B3-4C33-4A52-BDDB-373CBA073EB5}.Debug.Build.0 = Debug|.NET
+		{C2AC67B3-4C33-4A52-BDDB-373CBA073EB5}.Release.ActiveCfg = Release|.NET
+		{C2AC67B3-4C33-4A52-BDDB-373CBA073EB5}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

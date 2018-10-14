@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSZeiten" targetNamespace="http://www.tempuri.org/DSZeiten.xsd" xmlns:mstns="http://www.tempuri.org/DSZeiten.xsd" xmlns="http://www.tempuri.org/DSZeiten.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSZeiten" msdata:IsDataSet="true" msdata:Locale="de-DE">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Zeiten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Buchungsdatum" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dauer" type="xs:int" minOccurs="0" />
+              <xs:element name="EndZeit" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IDMaschinen" type="xs:int" minOccurs="0" />
+              <xs:element name="IDMitarbeiter" type="xs:int" minOccurs="0" />
+              <xs:element name="IDZeiten" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="StartZeit" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Zeiten" />
+      <xs:field xpath="mstns:IDZeiten" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

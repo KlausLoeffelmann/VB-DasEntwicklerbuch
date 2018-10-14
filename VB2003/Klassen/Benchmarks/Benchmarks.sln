@@ -1,0 +1,61 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Benchmark", "Benchmark\Benchmark.vbproj", "{A298A9B5-2F14-488B-85BC-C941EE1F2E86}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VBElements", "VBElements\VBElements.vbproj", "{D7C2F451-4DD7-4695-B3A2-57E031120168}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HighSpeedTimeGauge", "HighSpeedTimeGauge\HighSpeedTimeGauge.vbproj", "{08F66EB0-99C3-4D5B-B38F-B0A37139AE60}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPPElements", "CPPElements\CPPElements.vcproj", "{E81E6996-1726-432D-9726-CCE83BED0C12}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSElements", "CSElements\CSElements.csproj", "{3075681A-A441-42DA-BF12-55D142CBA8FA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{E6FDF86B-F3D1-11D4-8576-0002A516ECE8}") = "JSElements", "JSElements\JSElements.vjsproj", "{F6454BA4-6386-40A1-9FE9-DF0D5B0ACDB8}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A298A9B5-2F14-488B-85BC-C941EE1F2E86}.Debug.ActiveCfg = Debug|.NET
+		{A298A9B5-2F14-488B-85BC-C941EE1F2E86}.Debug.Build.0 = Debug|.NET
+		{A298A9B5-2F14-488B-85BC-C941EE1F2E86}.Release.ActiveCfg = Release|.NET
+		{A298A9B5-2F14-488B-85BC-C941EE1F2E86}.Release.Build.0 = Release|.NET
+		{D7C2F451-4DD7-4695-B3A2-57E031120168}.Debug.ActiveCfg = Debug|.NET
+		{D7C2F451-4DD7-4695-B3A2-57E031120168}.Debug.Build.0 = Debug|.NET
+		{D7C2F451-4DD7-4695-B3A2-57E031120168}.Release.ActiveCfg = Release|.NET
+		{D7C2F451-4DD7-4695-B3A2-57E031120168}.Release.Build.0 = Release|.NET
+		{08F66EB0-99C3-4D5B-B38F-B0A37139AE60}.Debug.ActiveCfg = Debug|.NET
+		{08F66EB0-99C3-4D5B-B38F-B0A37139AE60}.Debug.Build.0 = Debug|.NET
+		{08F66EB0-99C3-4D5B-B38F-B0A37139AE60}.Release.ActiveCfg = Release|.NET
+		{08F66EB0-99C3-4D5B-B38F-B0A37139AE60}.Release.Build.0 = Release|.NET
+		{E81E6996-1726-432D-9726-CCE83BED0C12}.Debug.ActiveCfg = Debug|Win32
+		{E81E6996-1726-432D-9726-CCE83BED0C12}.Debug.Build.0 = Debug|Win32
+		{E81E6996-1726-432D-9726-CCE83BED0C12}.Release.ActiveCfg = Release|Win32
+		{E81E6996-1726-432D-9726-CCE83BED0C12}.Release.Build.0 = Release|Win32
+		{3075681A-A441-42DA-BF12-55D142CBA8FA}.Debug.ActiveCfg = Debug|.NET
+		{3075681A-A441-42DA-BF12-55D142CBA8FA}.Debug.Build.0 = Debug|.NET
+		{3075681A-A441-42DA-BF12-55D142CBA8FA}.Release.ActiveCfg = Release|.NET
+		{3075681A-A441-42DA-BF12-55D142CBA8FA}.Release.Build.0 = Release|.NET
+		{F6454BA4-6386-40A1-9FE9-DF0D5B0ACDB8}.Debug.ActiveCfg = Debug|.NET
+		{F6454BA4-6386-40A1-9FE9-DF0D5B0ACDB8}.Debug.Build.0 = Debug|.NET
+		{F6454BA4-6386-40A1-9FE9-DF0D5B0ACDB8}.Release.ActiveCfg = Release|.NET
+		{F6454BA4-6386-40A1-9FE9-DF0D5B0ACDB8}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

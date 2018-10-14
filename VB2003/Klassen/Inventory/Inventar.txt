@@ -1,0 +1,11 @@
+;Inventarliste, die durch das Programm Inventory ausgewertet werden kann
+;Format:
+;Typ (1=Buch, 2=Cd oder Video), Bestellnummer, Titel, Zusatz, Brutto in Cent, Zusatz2
+1;0001;Die Nachwächter;Terry Pratchett und Andreas Brandhorst;1990;
+1;0002;Kristall der Träume;Barbara Wood;2490;
+1;0003;Volle Deckung - Mr. Bush: Dude where is my country;Michael Moore;1290;
+1;0004;Du bist nie allein;Nicholas Sparks und Ulrike Thiesmeyer;1900;
+2;0005;X-Men 2 - Special Edition;128;2299;Patrik Steward
+2;0006;Sex and the City: Season 5;220;2999;Sarah Jessica Parka
+2;0007;Indiana Jones (Box Set 4 DVDs);359;4499;Harrison Ford
+2;0008;Die Akte;135;1499;Julia Roberts

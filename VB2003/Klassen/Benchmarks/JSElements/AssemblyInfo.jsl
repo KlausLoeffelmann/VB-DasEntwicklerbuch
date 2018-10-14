@@ -1,0 +1,58 @@
+import System.Reflection.*;
+import System.Runtime.CompilerServices.*;
+
+//
+// Allgemeine Informationen über eine Assembly werden über folgende Attribute 
+// gesteuert. Ändern Sie diese Attributswerte, um die Informationen zu modifizieren,
+// die mit einer Assembly verknüpft sind.
+//
+/** @assembly AssemblyTitle("") */
+/** @assembly AssemblyDescription("") */
+/** @assembly AssemblyConfiguration("") */
+/** @assembly AssemblyCompany("") */
+/** @assembly AssemblyProduct("") */
+/** @assembly AssemblyCopyright("") */
+/** @assembly AssemblyTrademark("") */
+/** @assembly AssemblyCulture("") */
+
+//
+// Versionsinformationen für eine Assembly bestehen aus folgenden vier Werten:
+//
+//      Hauptversion
+//      Nebenversion 
+//      Buildnummer
+//      Revisionsnummer
+//
+// Sie können alle Werte angeben oder für die Revisions- und Buildnummern
+// den Standard verwenden, indem Sie '*' eingeben:
+
+/** @assembly AssemblyVersion("1.0.*") */
+
+//
+// Damit die Assembly signiert werden kann, muss der Schlüssel angegeben werden, der verwendet werden soll. In der 
+// Microsoft .NET Framework-Dokumentation finden Sie weitere Informationen über das Signieren von Assemblys.
+//
+// Verwenden Sie die unten aufgeführten Attribute, um zu steuern, welcher Schlüssel zum Signieren verwendet werden soll. 
+//
+// Hinweise: 
+//   (*) Wenn kein Schlüssel festgelegt ist, wird die Assembly nicht signiert.
+//   (*) KeyName bezieht sich auf einen Schlüssel, der im Crypto Service
+//       Provider (CSP) auf Ihrem Computer installiert wurde. KeyFile bezieht sich auf eine Datei, die einen Schlüssel
+//       enthält.
+//   (*) Wenn sowohl KeyFile als auch KeyName angegeben sind, werden die Werte 
+//       folgendermaßen verarbeitet:
+//       (1) Wenn sich KeyName im CSP befindet, dann wird dieser Schlüssel verwendet.
+//       (2) Wenn KeyName nicht verhanden ist, KeyFile jedoch existiert, wird der Schlüssel in 
+//           KeyFile im CSP installiert und verwendet.
+//   (*) Um KeyFile zu erstellen, können Sie das Dienstprogramm sn.exe (Strong Name) verwenden.
+//       Achten Sie beim Festlegen von KeyFile darauf, dass der Speicherort
+//       relativ zum "Projektverzeichnis" ist. Beispiel: Wenn sich KeyFile
+//       im Projektverzeichnis befindet, wird das
+//       AssemblyKeyFile-Attribut als @assembly AssemblyKeyFile("mykey.snk") angegeben
+//   (*) Das verzögern der Signierung ist eine erweiterte Option. Weitere Informationen finden Sie in der 
+//       Microsoft .NET Framework-Dokumentation.
+//
+
+/** @assembly AssemblyDelaySign(false) */
+/** @assembly AssemblyKeyFile("") */
+/** @assembly AssemblyKeyName("") */

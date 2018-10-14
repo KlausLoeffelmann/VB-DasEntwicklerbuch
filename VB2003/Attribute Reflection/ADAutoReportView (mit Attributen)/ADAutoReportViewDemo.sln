@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ADAutoReportViewDemo", "ADAutoReportViewDemo\ADAutoReportViewDemo.vbproj", "{F71BF2E0-5DF6-4A1C-9E04-7267B7DB564F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ADAutoReportView", "ADAutoReportView\ADAutoReportView.vbproj", "{A88A4445-1344-445F-9482-FA0951F94A87}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KeyedCollection", "..\..\DataTypes\KeyedCollectionDemo\KeyedCollection\KeyedCollection.vbproj", "{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F71BF2E0-5DF6-4A1C-9E04-7267B7DB564F}.Debug.ActiveCfg = Debug|.NET
+		{F71BF2E0-5DF6-4A1C-9E04-7267B7DB564F}.Debug.Build.0 = Debug|.NET
+		{F71BF2E0-5DF6-4A1C-9E04-7267B7DB564F}.Release.ActiveCfg = Release|.NET
+		{F71BF2E0-5DF6-4A1C-9E04-7267B7DB564F}.Release.Build.0 = Release|.NET
+		{A88A4445-1344-445F-9482-FA0951F94A87}.Debug.ActiveCfg = Debug|.NET
+		{A88A4445-1344-445F-9482-FA0951F94A87}.Debug.Build.0 = Debug|.NET
+		{A88A4445-1344-445F-9482-FA0951F94A87}.Release.ActiveCfg = Release|.NET
+		{A88A4445-1344-445F-9482-FA0951F94A87}.Release.Build.0 = Release|.NET
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Debug.ActiveCfg = Debug|.NET
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Debug.Build.0 = Debug|.NET
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Release.ActiveCfg = Release|.NET
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

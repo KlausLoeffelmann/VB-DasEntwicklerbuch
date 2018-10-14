@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Inventory", "Inventory.vbproj", "{AE759918-6A99-40E0-97AB-DFC21E97825E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{AE759918-6A99-40E0-97AB-DFC21E97825E}.Debug.ActiveCfg = Debug|.NET
+		{AE759918-6A99-40E0-97AB-DFC21E97825E}.Debug.Build.0 = Debug|.NET
+		{AE759918-6A99-40E0-97AB-DFC21E97825E}.Release.ActiveCfg = Release|.NET
+		{AE759918-6A99-40E0-97AB-DFC21E97825E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

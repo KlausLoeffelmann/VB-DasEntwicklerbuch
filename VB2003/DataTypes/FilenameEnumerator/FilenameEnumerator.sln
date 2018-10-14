@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FilenameEnumerator", "FilenameEnumerator.vbproj", "{6254728F-AF61-48B1-88E5-CD38449D8014}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6254728F-AF61-48B1-88E5-CD38449D8014}.Debug.ActiveCfg = Debug|.NET
+		{6254728F-AF61-48B1-88E5-CD38449D8014}.Debug.Build.0 = Debug|.NET
+		{6254728F-AF61-48B1-88E5-CD38449D8014}.Release.ActiveCfg = Release|.NET
+		{6254728F-AF61-48B1-88E5-CD38449D8014}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

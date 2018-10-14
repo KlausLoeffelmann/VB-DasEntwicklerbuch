@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SimpleForm", "SimpleForm.vbproj", "{3246D0C8-5AFC-41DB-A749-F300861CA2FC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{3246D0C8-5AFC-41DB-A749-F300861CA2FC}.Debug.ActiveCfg = Debug|.NET
+		{3246D0C8-5AFC-41DB-A749-F300861CA2FC}.Debug.Build.0 = Debug|.NET
+		{3246D0C8-5AFC-41DB-A749-F300861CA2FC}.Release.ActiveCfg = Release|.NET
+		{3246D0C8-5AFC-41DB-A749-F300861CA2FC}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

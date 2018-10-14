@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KeyedCollection", "KeyedCollection\KeyedCollection.vbproj", "{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KeyedCollectionDemo", "KeyedCollectionDemo\KeyedCollectionDemo.vbproj", "{F0DE2CFA-DF1D-4763-9299-285F5E542163}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Debug.ActiveCfg = Debug|.NET
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Debug.Build.0 = Debug|.NET
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Release.ActiveCfg = Release|.NET
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Release.Build.0 = Release|.NET
+		{F0DE2CFA-DF1D-4763-9299-285F5E542163}.Debug.ActiveCfg = Debug|.NET
+		{F0DE2CFA-DF1D-4763-9299-285F5E542163}.Debug.Build.0 = Debug|.NET
+		{F0DE2CFA-DF1D-4763-9299-285F5E542163}.Release.ActiveCfg = Release|.NET
+		{F0DE2CFA-DF1D-4763-9299-285F5E542163}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

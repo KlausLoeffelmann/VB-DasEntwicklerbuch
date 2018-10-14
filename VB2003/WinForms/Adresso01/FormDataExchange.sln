@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FormDataExchange", "FormDataExchange.vbproj", "{D44DAE87-35A1-4087-80A9-74507F9CFBE6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "KeyedCollection", "..\..\DataTypes\KeyedCollectionDemo\KeyedCollection\KeyedCollection.vbproj", "{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D44DAE87-35A1-4087-80A9-74507F9CFBE6}.Debug.ActiveCfg = Debug|.NET
+		{D44DAE87-35A1-4087-80A9-74507F9CFBE6}.Debug.Build.0 = Debug|.NET
+		{D44DAE87-35A1-4087-80A9-74507F9CFBE6}.Release.ActiveCfg = Release|.NET
+		{D44DAE87-35A1-4087-80A9-74507F9CFBE6}.Release.Build.0 = Release|.NET
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Debug.ActiveCfg = Debug|.NET
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Debug.Build.0 = Debug|.NET
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Release.ActiveCfg = Release|.NET
+		{FB4E165A-2AB0-403A-938F-E8F0863E3F7F}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

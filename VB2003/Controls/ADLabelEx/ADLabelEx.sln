@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ADLabelEx", "ADLabelEx\ADLabelEx.vbproj", "{13289C97-453D-473B-ABCC-7ABD05CED10B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ADLabelExTest", "ADLabelExTest\ADLabelExTest.vbproj", "{B3CADABF-9D6F-425D-9A3A-B118A570B955}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{13289C97-453D-473B-ABCC-7ABD05CED10B}.Debug.ActiveCfg = Debug|.NET
+		{13289C97-453D-473B-ABCC-7ABD05CED10B}.Debug.Build.0 = Debug|.NET
+		{13289C97-453D-473B-ABCC-7ABD05CED10B}.Release.ActiveCfg = Release|.NET
+		{13289C97-453D-473B-ABCC-7ABD05CED10B}.Release.Build.0 = Release|.NET
+		{B3CADABF-9D6F-425D-9A3A-B118A570B955}.Debug.ActiveCfg = Debug|.NET
+		{B3CADABF-9D6F-425D-9A3A-B118A570B955}.Debug.Build.0 = Debug|.NET
+		{B3CADABF-9D6F-425D-9A3A-B118A570B955}.Release.ActiveCfg = Release|.NET
+		{B3CADABF-9D6F-425D-9A3A-B118A570B955}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

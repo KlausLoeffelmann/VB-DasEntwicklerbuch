@@ -1,0 +1,29 @@
+ [0000] push        edi
+ [0001] push        esi
+ [0002] push        ebx
+*[0003] mov         eax,dword ptr ds:[060615C4h]
+ [0009] mov         edi,dword ptr [eax+8]
+ [000c] mov         ebx,5
+ [0011] mov         ecx,dword ptr ds:[060621B8h]
+ [0017] mov         edx,dword ptr ds:[060615D0h]
+ [001d] mov         eax,dword ptr [ecx]
+ [001f] call        dword ptr [eax+000000D8h]
+ [0025] call        dword ptr ds:[79C3531Ch]
+ [002b] xor         esi,esi
+ [002d] test        edi,edi
+ [002f] js          00000016
+ [0031] add         ebx,1
+ [0034] jo          00000029
+ [0036] call        dword ptr ds:[79C29078h]
+ [003c] add         esi,1
+ [003f] jo          0000001E
+ [0041] cmp         esi,edi
+ [0043] jle         FFFFFFEE
+ [0045] mov         ecx,dword ptr ds:[060621B8h]
+ [004b] mov         edx,dword ptr ds:[060615D4h]
+ [0051] mov         eax,dword ptr [ecx]
+ [0053] call        dword ptr [eax+000000D8h]
+ [0059] pop         ebx
+ [005a] pop         esi
+ [005b] pop         edi
+ [005c] ret

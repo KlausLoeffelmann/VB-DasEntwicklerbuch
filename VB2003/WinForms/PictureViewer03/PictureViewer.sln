@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PictureViewer", "PictureViewer.vbproj", "{24DF0C8B-1865-47E5-805F-EC1CABAA625E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{24DF0C8B-1865-47E5-805F-EC1CABAA625E}.Debug.ActiveCfg = Debug|.NET
+		{24DF0C8B-1865-47E5-805F-EC1CABAA625E}.Debug.Build.0 = Debug|.NET
+		{24DF0C8B-1865-47E5-805F-EC1CABAA625E}.Release.ActiveCfg = Release|.NET
+		{24DF0C8B-1865-47E5-805F-EC1CABAA625E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

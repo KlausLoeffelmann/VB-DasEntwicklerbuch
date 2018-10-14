@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ADComboListBox", "ADComboListBox\ADComboListBox.vbproj", "{EF3B96AC-05F0-4C1B-91DD-6AFF6B4103D6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ADComboListBoxTest", "ADComboListBoxTest\ADComboListBoxTest.vbproj", "{2E3FF480-A1C9-48D3-904C-5CBF6C76D7B3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EF3B96AC-05F0-4C1B-91DD-6AFF6B4103D6}.Debug.ActiveCfg = Debug|.NET
+		{EF3B96AC-05F0-4C1B-91DD-6AFF6B4103D6}.Debug.Build.0 = Debug|.NET
+		{EF3B96AC-05F0-4C1B-91DD-6AFF6B4103D6}.Release.ActiveCfg = Release|.NET
+		{EF3B96AC-05F0-4C1B-91DD-6AFF6B4103D6}.Release.Build.0 = Release|.NET
+		{2E3FF480-A1C9-48D3-904C-5CBF6C76D7B3}.Debug.ActiveCfg = Debug|.NET
+		{2E3FF480-A1C9-48D3-904C-5CBF6C76D7B3}.Debug.Build.0 = Debug|.NET
+		{2E3FF480-A1C9-48D3-904C-5CBF6C76D7B3}.Release.ActiveCfg = Release|.NET
+		{2E3FF480-A1C9-48D3-904C-5CBF6C76D7B3}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
