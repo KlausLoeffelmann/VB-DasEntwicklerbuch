@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TypedDataSet", "TypedDataSet.vbproj", "{A729097E-1DE6-4AA3-B360-19C7B3747CDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A729097E-1DE6-4AA3-B360-19C7B3747CDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A729097E-1DE6-4AA3-B360-19C7B3747CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A729097E-1DE6-4AA3-B360-19C7B3747CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A729097E-1DE6-4AA3-B360-19C7B3747CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

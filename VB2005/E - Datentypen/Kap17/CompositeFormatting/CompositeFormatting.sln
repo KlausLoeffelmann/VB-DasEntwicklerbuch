@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CompositeFormatting", "CompositeFormatting.vbproj", "{96A451C0-EE08-4015-A984-9751D1C76D7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96A451C0-EE08-4015-A984-9751D1C76D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A451C0-EE08-4015-A984-9751D1C76D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A451C0-EE08-4015-A984-9751D1C76D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A451C0-EE08-4015-A984-9751D1C76D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

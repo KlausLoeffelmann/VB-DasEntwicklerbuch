@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+
+      <Title>
+        <!-- An dieser Stelle den Namen des Codeausschnitts einfügen: -->
+        Datei-Öffnen-Dialog
+      </Title>
+
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+
+          <!-- An dieser Stelle den Namen einer benötigten
+          Assembly-Referenz einfügen: -->
+          <Assembly>System.Windows.Forms.dll</Assembly>
+
+        </Reference>
+      </References>
+
+      <!-- Hier folgt die eigentliche Codedefinition: -->
+      <Code Language="VB">
+        <![CDATA[
+        Dim dateiÖffnenDialog As New OpenFileDialog
+        With dateiÖffnenDialog
+            .CheckFileExists = True
+            .CheckPathExists = True
+            .DefaultExt = "*.txt"
+            .Filter = "Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*"
+            Dim dialogErgebnis As DialogResult = .ShowDialog
+            If dialogErgebnis = Windows.Forms.DialogResult.Cancel Then
+                Exit Sub
+            End If
+        End With
+        ]]>
+
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

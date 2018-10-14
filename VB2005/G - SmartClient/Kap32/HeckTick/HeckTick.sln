@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HeckTick", "HeckTick\HeckTick.vbproj", "{BAF8191A-64A2-445C-B67E-86E854195BCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAF8191A-64A2-445C-B67E-86E854195BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF8191A-64A2-445C-B67E-86E854195BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF8191A-64A2-445C-B67E-86E854195BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF8191A-64A2-445C-B67E-86E854195BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

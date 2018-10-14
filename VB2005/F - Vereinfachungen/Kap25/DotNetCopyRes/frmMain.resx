@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;tsbEditCopyListEntry.Name" xml:space="preserve">
+    <value>tsbEditCopyListEntry</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtProtocol.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblProgressCaption.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>604, 351</value>
+  </data>
+  <data name="lblDestFileInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtProtocol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tsbOptions.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lvwCopyEntries.Parent" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="TabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>604, 351</value>
+  </data>
+  <data name="tsmToolsOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 22</value>
+  </data>
+  <data name="&gt;&gt;tsmEdit.Name" xml:space="preserve">
+    <value>tsmEdit</value>
+  </data>
+  <data name="lblCurrentDestinationPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 305</value>
+  </data>
+  <data name="tsbDeleteCopyListEntry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="&gt;&gt;tsmNewCopyListEntry.Name" xml:space="preserve">
+    <value>tsmNewCopyListEntry</value>
+  </data>
+  <data name="&gt;&gt;tsbNewCopyListEntry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblCurrentPass.Text" xml:space="preserve">
+    <value>Pass 1: Kopiervorbereitung durch Zusammenstellung der Pfade...</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator1.Name" xml:space="preserve">
+    <value>ToolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;lblProgressCaption.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="txtProtocol.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Name" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;tsbOptions.Name" xml:space="preserve">
+    <value>tsbOptions</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.Name" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="tsmFileSaveCopyList.Text" xml:space="preserve">
+    <value>Kopierliste speichern...</value>
+  </data>
+  <data name="&gt;&gt;tsmFileQuit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tsbNewCopyListEntry.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAeFJREFUOE+Nk01L
+        G1EUhieuSxeKq1IK/oGiVMGfULdu3LhSXPsHRIUiYrVEY4bUqI0fjdhBq6U1pYo2xjSKigHj90ccdUI+
+        GpNxkkwycfJ25pYM2OokBw73Hu59H855L9dAKXHhasHT8mfUk9IyinUPUC9qWygxVULd3gjU81ftBvWO
+        bggsjYvvVQDfi6vVBmU1wr/wEvGzPhTSknMpPAgINJD1QOBmlNVF6suDt6AnF0iaJ77BveV9GHjEVIBd
+        qUci+Bky4khFvpKaW6xBPgZsX1BT1/wwhHTAm4D0CoGonZA6/kEDvBuexQ+3j0DWNv/pRLi0wO+ohBxq
+        Q+BXoyI0EQ8yQZsG6LFME3E+73nDelpxc9gJKdAFbrkW/sP3SLH9CHk7NYCcy2FkZg3DjItAHjXXODqn
+        ifIbRQsxk0WUT2H25xGqXzc9DugdYv4DpKU7xAQR1+FbMEt7+oBu89Q9gJS9A5/IIPBbwPFVFHbHjj7g
+        Tf+4BsjKMoRkBsFoAqfXMXhPQhibX9cHdPSNEoAs55AUJYRjSfgDceyeReDxcbB+cuoD2nqsyCmuiem/
+        prFBHvvnEWzscVjeZkF/XCoMUE1T3VYNU2e2KW1bGSdo+yJM447CI6jPVCiL+mTFXPoD6CDtEs39KowA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentSourcePath.Name" xml:space="preserve">
+    <value>lblCurrentSourcePath</value>
+  </data>
+  <data name="lblProgressCaption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 13</value>
+  </data>
+  <data name="lblCurrentDestinationPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>436, 18</value>
+  </data>
+  <data name="tsmEdit.Text" xml:space="preserve">
+    <value>&amp;Bearbeiten</value>
+  </data>
+  <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtProtocol.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="tsbStartNow.Text" xml:space="preserve">
+    <value>Kopiervorgang starten</value>
+  </data>
+  <data name="MenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>612, 24</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblCurrentPass.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="tsbDeleteCopyListEntry.Text" xml:space="preserve">
+    <value>Kopierlisteneintrag löschen</value>
+  </data>
+  <data name="ToolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="tsbDeleteCopyListEntry.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAdFJREFUOE+1Ul1P
+        2lAYLn9hJtuucCS6zRg2UEcpIFCGEjcxJMtY0GRZJuKFUVsC924XzIUocIsgmnRRIanpgIqUr7/Dr3jW
+        U0OcsVt640lOTnLO+3y8z3lNg8EAw+GQ6g36FONkqHGzmWJZ1kQZXb1eDwcHh2DZIBZDIRSLRZA7PXy3
+        24UkSchms7fvpDiXy2N9PQGamYefXUAm8+MeiaIoKB9XsBIOg+eTdwXq9ToEQUB8YxMujw9enx88twNF
+        aWuFBMzxPHzsW6RSabSur3UdUsTi/v5PsIEgvN4AUuk0zs7OkUymMe/xYGt7F/LVlT541HO/30etVkP0
+        UwwO2q1uFxi3C9HYGtrtG0eG1tFRCfYZGoyL5BJEo9E0DhZFUW1jEdZXdry2zWHujRM+f8AYgSheamG9
+        eGlFbHUNpXIZy+EIbPZZ7H37/n8SSfoNrwo2WyYRiXxQbTfQarW0/eVrHA4HAyKgmwH5qtjqZ1gmpuD2
+        +LX0R4UkvGZTxtL7sEakO2i5fB6Pnz7D5PNp7OxymurfSgR0Ua2Cpp2oqucdEqKeSGzi0dgTvFNVBOGX
+        rgqZE45L6o975eQUH6NRFAoFyLL8z7A6nc49d4bm4sGK/gAS1iNapXMNYAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tsbNewCopyListEntry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="&gt;&gt;tsbDeleteCopyListEntry.Name" xml:space="preserve">
+    <value>tsbDeleteCopyListEntry</value>
+  </data>
+  <data name="lblCurrentSourcePath.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;tsbStartNow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmNewCopyListEntry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="&gt;&gt;lvwCopyEntries.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tsmEditCopyEntryEdit.Text" xml:space="preserve">
+    <value>Kopierlisteneintrag bearbeiten...</value>
+  </data>
+  <data name="&gt;&gt;tsmToolsOptions.Name" xml:space="preserve">
+    <value>tsmToolsOptions</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator3.Name" xml:space="preserve">
+    <value>ToolStripSeparator3</value>
+  </data>
+  <data name="tsbSaveCopyList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="lblCurrentDestinationPath.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;tsmFileSaveCopyList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtProtocol.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;TestToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSourceFileInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tsbSaveCopyList.Text" xml:space="preserve">
+    <value>Kopierliste speichern</value>
+  </data>
+  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>612, 25</value>
+  </data>
+  <data name="lblProgressCaption.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 341</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentDestinationPath.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;tsmTools.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblProgressCaption.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="MenuStrip1.Text" xml:space="preserve">
+    <value>MenuStrip1</value>
+  </data>
+  <data name="pbPrepareAndCopy.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;tsmToolsStartNow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tsmEditCopyListEntryDelete.Text" xml:space="preserve">
+    <value>Kopierlisteneintrag löschen</value>
+  </data>
+  <data name="tsmToolsStartNow.Text" xml:space="preserve">
+    <value>Jetzt starten!</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem3.Name" xml:space="preserve">
+    <value>ToolStripMenuItem3</value>
+  </data>
+  <data name="ToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 6</value>
+  </data>
+  <data name="tsmTools.Text" xml:space="preserve">
+    <value>&amp;Extras</value>
+  </data>
+  <data name="tsmNewCopyListEntry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 22</value>
+  </data>
+  <data name="tsmEditCopyEntryEdit.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbSaveCopyList.Name" xml:space="preserve">
+    <value>tsbSaveCopyList</value>
+  </data>
+  <data name="TabPage1.Text" xml:space="preserve">
+    <value>Kopierliste</value>
+  </data>
+  <data name="lblCurrentPass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="tsbEditCopyListEntry.Text" xml:space="preserve">
+    <value>Kopierlisteneintrag bearbeiten</value>
+  </data>
+  <data name="lblSourceFileInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 13</value>
+  </data>
+  <data name="ToolStrip1.Text" xml:space="preserve">
+    <value>ToolStrip1</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tsbEditCopyListEntry.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAjVJREFUOE+tk11I
+        k2EYhkcnQZ0YJAQVUSfhiZSdBZE76aDpflRM0Ur70QwKmRgiRoNUkCwjUTNSYpn9uNTCqFaxNMVpP9pW
+        hmWObS2auTKTtR+3q8/PphMnHdQDN8/7fnBfz/Pe8Ekk/7MMBgOt2noet5+lraWZjmsartZpuFKrob6q
+        mOqyAjT5GbQ0N1J+r4Rj7Vksmq+/o8P+5hInDiXB1+Nz8tnUTL3LZeRJCmfUKiou51H2oiwC4EEHRQcV
+        4DpC68U0EeC1qvn18SiTA6m4emX49Jto1u4nWSdFcrLBQki39O/RNVXhtZ+ipjRZhCi2b8H9IY+fpjRc
+        z+IZe7SV8RurqDyvRNoYNwto6oGHfQ7R7LaeJj9bhu1lMblZwjMEiHKHFMvdOIz16+mujubcgdWocuLZ
+        WRczC7jf/0M0O8zlorniwnWh72a0M5v0xD0wuIFtm6NZsTyK2I3LOJyqIKMonbjKNUg6ja+ZKafTRmnh
+        PhyfLOL9VX+XCBm6GcvaqJVkZe6ltqFpLrSiGjUxOevmAQT8iPpT08EgutvtqDOlmIft2F2wS56yOPWn
+        vbMbhAMCgtnjDzLpDvBlYlrUiHMJQFefWfRr27pFBcPOoW8zfcixBKDTaFqwwbRA8PgCfJ/y8/mbn1Gn
+        D5PNw6DtL4DQNK8QQ/jk0Pn5aCByBsaB4QUbuIVbSONesE7A2zEwCYoYYkFhCTKZnERFyrxUqSQok5Ep
+        kkgQNNNlclVkwL/+zb8BsuEg4VMkEf8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="lblCurrentSourcePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 281</value>
+  </data>
+  <data name="tsbSaveCopyList.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="lblCurrentSourcePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>436, 18</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.Name" xml:space="preserve">
+    <value>MenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;pbPrepareAndCopy.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="tsbDeleteCopyListEntry.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tsmEditCopyListEntryDelete.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tsbSaveCopyList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lvwCopyEntries.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentDestinationPath.Name" xml:space="preserve">
+    <value>lblCurrentDestinationPath</value>
+  </data>
+  <data name="TabPage2.Text" xml:space="preserve">
+    <value>Ausführungsstatus</value>
+  </data>
+  <data name="lblCurrentPass.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtProtocol.Name" xml:space="preserve">
+    <value>txtProtocol</value>
+  </data>
+  <data name="&gt;&gt;lblDestFileInfo.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="tsbNewCopyListEntry.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;tsbLoadCopyList.Name" xml:space="preserve">
+    <value>tsbLoadCopyList</value>
+  </data>
+  <data name="tsbLoadCopyList.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAlRJREFUOE+dkslP
+        U1EUxstfYOKwdO3OGBM1cVqo0ejCEF0R3enCjYkrMSURjUriFC22NQ0oUlpKAYtUxdLX1DKIA8REIAQK
+        pfj6OiCVVgv66Bs+7z3akqcujPfly7nJfd/vDPdWmNjy90+CLb418ajrOou6SdfwK7I9+6DDdGjnJtP6
+        tWsq6OfS4gBd5wxmY1FjUjWgqOr4VtRR+K7j85KGxo4Ith85jYXF/M9svwM4g1QGADIDLDFAjgFsrl4E
+        X43/CXnSN0EmUqkKVoHCKpAVBpA15JY13HO+IHNJ5Qp84XEyX28IURsjszOwx+3wJQI40fQIwrtpquCi
+        VUC2oMElxAhSBnSGPpB53e46ApxsOYcaqQq3x8awp30AB7y1BODn5noBzcEYth0+tQrw9r6nw1Ib+y+F
+        cdBTiX2uHmy2PsbGhmOUObWo0n8PArNGQOvzYapgw64rNP2qm0nsve/BDut5bDk7hcpr9fj0RaPzC3eD
+        cPTMGQFO/xsy1jlCWGFDCw3HcfSyG1vPWHC82o/gUBSpnAqzJYhoSoHtqWgENHUNknFZXtVXdnV5Nvls
+        QeW9QsyqmMkomJCKuNOdMAIaOyNk9g2l0DmYRPuABG+/BE8kQWYuZ2gOzUIcox+LuOGTjABHW5jds45M
+        XsM8E49pVnLJ/LdouAV7q0AmnrmtL0GZ3S/FfwfwJypmFRpQNK1gisXJZJH1q5QhIzEZb6dX8Doqo8Y1
+        b2yBP9FRsYiHgTiJX5PtmQhLt4hbXRJBrnakUOtJw+zOoLplwQjg/fyP+FP+Aa64fjGUJwUDAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="lvwCopyEntries.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tsbOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Name" xml:space="preserve">
+    <value>ToolStrip1</value>
+  </data>
+  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblCurrentSourcePath.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="TabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lblCurrentPass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>609, 23</value>
+  </data>
+  <data name="tsmEditCopyEntryEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 22</value>
+  </data>
+  <data name="&gt;&gt;tsbLoadCopyList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage2.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="MenuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblDestFileInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tsmFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentSourcePath.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="pbPrepareAndCopy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 338</value>
+  </data>
+  <data name="lvwCopyEntries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="tsmTools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 49</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentDestinationPath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tsmFile.Name" xml:space="preserve">
+    <value>tsmFile</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem1.Name" xml:space="preserve">
+    <value>ToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSourceFileInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;pbPrepareAndCopy.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentDestinationPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblCurrentPass.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblDestFileInfo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tsbEditCopyListEntry.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="TabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmMain</value>
+  </data>
+  <data name="tsmFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>612, 377</value>
+  </data>
+  <data name="&gt;&gt;tsmFileQuit.Name" xml:space="preserve">
+    <value>tsmFileQuit</value>
+  </data>
+  <data name="&gt;&gt;txtProtocol.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="tsbEditCopyListEntry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="lvwCopyEntries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>598, 345</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tsmTools.Name" xml:space="preserve">
+    <value>tsmTools</value>
+  </data>
+  <data name="&gt;&gt;lblProgressCaption.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="txtProtocol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>606, 237</value>
+  </data>
+  <data name="lblProgressCaption.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;lblSourceFileInfo.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentSourcePath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tsmEditCopyListEntryDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 22</value>
+  </data>
+  <data name="&gt;&gt;TestToolStripMenuItem.Name" xml:space="preserve">
+    <value>TestToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tsbEditCopyListEntry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmEditCopyEntryEdit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblCurrentDestinationPath.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;TabPage1.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="lblSourceFileInfo.Text" xml:space="preserve">
+    <value>Unterverzeichnisse suchen in:</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
+    <value>ToolStripSeparator2</value>
+  </data>
+  <data name="txtProtocol.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="lblProgressCaption.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tsmToolsStartNow.Name" xml:space="preserve">
+    <value>tsmToolsStartNow</value>
+  </data>
+  <data name="&gt;&gt;tsmEditCopyEntryEdit.Name" xml:space="preserve">
+    <value>tsmEditCopyEntryEdit</value>
+  </data>
+  <data name="lblCurrentSourcePath.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentPass.Name" xml:space="preserve">
+    <value>lblCurrentPass</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>509, 338</value>
+  </data>
+  <data name="tsbOptions.Text" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="&gt;&gt;tsmEditCopyListEntryDelete.Name" xml:space="preserve">
+    <value>tsmEditCopyListEntryDelete</value>
+  </data>
+  <data name="tsmToolsStartNow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 22</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentSourcePath.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="tsbStartNow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentPass.Parent" xml:space="preserve">
+    <value>TabPage2</value>
+  </data>
+  <data name="tsmFileOpenCopyList.Text" xml:space="preserve">
+    <value>Kopierliste öffnen...</value>
+  </data>
+  <data name="tsmFile.Text" xml:space="preserve">
+    <value>&amp;Datei</value>
+  </data>
+  <data name="&gt;&gt;tsbOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tsmFileOpenCopyList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 22</value>
+  </data>
+  <data name="&gt;&gt;tsbStartNow.Name" xml:space="preserve">
+    <value>tsbStartNow</value>
+  </data>
+  <data name="tsmFileQuit.Text" xml:space="preserve">
+    <value>Be&amp;enden</value>
+  </data>
+  <data name="tsmNewCopyListEntry.Text" xml:space="preserve">
+    <value>Neuer Kopierlisteneintrag...</value>
+  </data>
+  <data name="lblDestFileInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 310</value>
+  </data>
+  <data name="&gt;&gt;tsmEditCopyListEntryDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbNewCopyListEntry.Name" xml:space="preserve">
+    <value>tsbNewCopyListEntry</value>
+  </data>
+  <data name="tsbLoadCopyList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 300</value>
+  </data>
+  <data name="tsbSaveCopyList.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAk5JREFUOE+dkstv
+        UkEUxulfYOJj6dqdMSZq4muhRqML0+iq0Z0u3Ji4soYmPqI2PqNUwJBWq5RCaSm1qJUCQfqwMbYxKk3T
+        ohR6uSC1WFBapdx753PmKDRX40Ln5su5ycz3O4+ZGgNfvsFJ8CV+DSIyxnhkBqbhV+T//AODYd/WdYbV
+        K1fU0OHKEgDGBIPbeNS4VA0oqwzfygzF7wyfFzS0dEWw+cBxzM0Xfmb7HSAYpCoAKHHAAgfkOcDi6Efg
+        xfifkEcDE2QiVargFSi8gpLCASUN+UUNd+zPyFxRtQJveJzMV5tD1MbY9AdYE1Z4U34caX2A4Kv3VMFZ
+        cxC5ogZHME6QKsATekvmVdsbCXC07RQa5DrcjEaxo3MIe9znCCD2jU1BPAzEsWn/sWWAu/81bVba2H0+
+        jL2uWuxy9GG9uRtrmw9R5sy8Sufu+af1AOfTUapgzbaLNP2662nsvOvCFvNpbDg5hdrLTfj0RaP9M7cD
+        sPUl9QC77yUZG20hLPGhhUYTOHihHRtPmHC43ofASAyZvAqjKYBYRoHlsaQHtPYMk3GxtKyv/OoKfPK5
+        ooosN0s5VfSMCbmMW70pPaDFEyGzdyQDz3AanUMy3IMyXJEUnM8lOMIzsIeSBBC65pX1AFtHmN8zQ7ag
+        YZZLxMrhv0XdLVidQTKJzB0DKcr8TwDxRKWcQgOKfVQwxeNkusz7VRCVFLxJLmEsXqpCGxyz+hbEE30n
+        lXHfnyCJa7I8kWDqlXCjR8aV7jQudWUIYGzPor5tTg8Q/fyPxFP+AalLeP8KDWHoAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 20</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbPrepareAndCopy.Name" xml:space="preserve">
+    <value>pbPrepareAndCopy</value>
+  </data>
+  <data name="TestToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 22</value>
+  </data>
+  <data name="&gt;&gt;tsmFileSaveCopyList.Name" xml:space="preserve">
+    <value>tsmFileSaveCopyList</value>
+  </data>
+  <data name="&gt;&gt;tsmFileOpenCopyList.Name" xml:space="preserve">
+    <value>tsmFileOpenCopyList</value>
+  </data>
+  <data name="lblSourceFileInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblCurrentDestinationPath.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblSourceFileInfo.Name" xml:space="preserve">
+    <value>lblSourceFileInfo</value>
+  </data>
+  <data name="&gt;&gt;tsmFileOpenCopyList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tsbLoadCopyList.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tsbStartNow.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAONJREFUOE9jYEAD
+        AgV8/7df2fYfXZxoPsgAigwBaS68bke+ITADyDYEZEDeVdv/WRet/qeeNSfdJSAD0s5Z/E88afo/+qjh
+        /5D9+qQZAjIg5pjx/9AD+v/9d2v/d9+q/t9hvTLxhoAMCNyj+99zm+Z/pw2q/61XKvw3WSzzX2euJNgQ
+        gtEJUuSyUe2/zWrF/6ZL5f7rzZf8rz5LjDQXmC+X/6+/QPq/5izx/0pThYnXDHIeyAXac8T/q04X+S83
+        SZA0zTAD5CcL/Zfq5yddM8wA8W5e8jTDDKA4L1CUGwnGM5oCAAqspGmAJ2iVAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="lblDestFileInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
+  <data name="tsbLoadCopyList.Text" xml:space="preserve">
+    <value>Kopierliste laden</value>
+  </data>
+  <data name="tsmToolsOptions.Text" xml:space="preserve">
+    <value>&amp;Optionen...</value>
+  </data>
+  <data name="tsbOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAYFJREFUOE+tk8tK
+        QlEUhn2WsOgFiqJmjYoaBY2DIvEtmgWNkrCToRJplJc0TDMNL13EzI4lHiOONxQyzDKtTC3tr7PDBnWO
+        NXDBz2axWd9a699skahdYTm8wk+Z3Ax0jnNodwKgLzNo2YsrFgqlwYvekenWELMnKgiQax1w+pgvSDTN
+        P4lhPywIWFyzk+KmeFfZ2D0jALXWCHFnN4zbtm9gvdGA1UPDYPcTCC9AYzkhBR3iLtA0jfGJSZLLVZuQ
+        KTSgVvXQ2XzoGZ7iB6hNR6RAb7ZiYHAIdqeX5GwigwsmjmA4BqXeJQxY0bl/eVBvvOOxXEM2/ww2XUDT
+        C94VltadBBAKhSCVSpFMJlGpviH/8ILUdRGRWB6qzwn6Rmf4V+DoXEgkEnJSFIXiUxULyxrMyVSYnaew
+        tRdA/9gfgHg8DoVCgdxtHrn7MmgmheMgC5efhcZ8IOxBcwKue+21jkKpgvRNCdHEHQKRLFynaeKB4Cs0
+        AdzZSi0B3OV/1K4PTDgffIfb4V/EkO4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;tsmToolsOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tsmEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
+  </data>
+  <data name="tsmFileQuit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 22</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentPass.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblProgressCaption.Text" xml:space="preserve">
+    <value>Fortschritt Vorbereitung:</value>
+  </data>
+  <data name="&gt;&gt;pbPrepareAndCopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSourceFileInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>612, 426</value>
+  </data>
+  <data name="TestToolStripMenuItem.Text" xml:space="preserve">
+    <value>Test...</value>
+  </data>
+  <data name="&gt;&gt;lblProgressCaption.Name" xml:space="preserve">
+    <value>lblProgressCaption</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>DotNetCopy:  "My"-Demo in Visual Basic 2005 - Das Entwicklerbuch</value>
+  </data>
+  <data name="pbPrepareAndCopy.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 6</value>
+  </data>
+  <data name="lblDestFileInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="lblDestFileInfo.Text" xml:space="preserve">
+    <value>Kopieren nach:</value>
+  </data>
+  <data name="&gt;&gt;lblDestFileInfo.Name" xml:space="preserve">
+    <value>lblDestFileInfo</value>
+  </data>
+  <data name="TabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="pbPrepareAndCopy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 20</value>
+  </data>
+  <data name="&gt;&gt;tsmEdit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="lblCurrentPass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lvwCopyEntries.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblDestFileInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tsbNewCopyListEntry.Text" xml:space="preserve">
+    <value>Neuer Kopierlisteneintrag</value>
+  </data>
+  <data name="lblSourceFileInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 284</value>
+  </data>
+  <data name="&gt;&gt;lvwCopyEntries.Name" xml:space="preserve">
+    <value>lvwCopyEntries</value>
+  </data>
+  <data name="ToolStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tsbStartNow.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="TabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="tsmFileSaveCopyList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 22</value>
+  </data>
+  <data name="&gt;&gt;tsbDeleteCopyListEntry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentPass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtProtocol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;lblSourceFileInfo.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ToolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 24</value>
+  </metadata>
+  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>English</value>
+  </metadata>
+</root>

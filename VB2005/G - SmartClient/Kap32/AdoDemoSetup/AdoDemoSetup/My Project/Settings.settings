@@ -1,0 +1,86 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppAnwendungZuvorGestartet" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HeckTickDBCreationCommandText" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/****** Object:  Table [dbo].[Berater]    Script Date: 03/04/2006 16:01:45 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Berater]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Berater](
+	[IDBerater] [int] IDENTITY(1,1) NOT NULL,
+	[Nachname] [nvarchar](255) NOT NULL,
+	[Vorname] [nvarchar](255) NOT NULL,
+	[Straße] [nvarchar](255) NOT NULL,
+	[Plz] [nvarchar](50) NOT NULL,
+	[Ort] [nvarchar](255) NOT NULL,
+ CONSTRAINT [PK_Berater] PRIMARY KEY CLUSTERED 
+(
+	[IDBerater] ASC
+)WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+/****** Object:  Table [dbo].[Projekte]    Script Date: 03/04/2006 16:01:45 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Projekte]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Projekte](
+	[IDProjekte] [int] IDENTITY(1,1) NOT NULL,
+	[Projektname] [nvarchar](50) NOT NULL,
+	[Projektbeschreibung] [nvarchar](2000) NULL,
+	[Startzeitpunkt] [datetime] NOT NULL,
+	[Endzeitpunkt] [datetime] NOT NULL,
+	[Ausführungsort] [nvarchar](255) NULL,
+ CONSTRAINT [PK_Projekte] PRIMARY KEY CLUSTERED 
+(
+	[IDProjekte] ASC
+)WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+/****** Object:  Table [dbo].[Zeiten]    Script Date: 03/04/2006 16:01:45 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Zeiten]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Zeiten](
+	[IDZeiten] [int] IDENTITY(1,1) NOT NULL,
+	[IDProjekt] [int] NOT NULL,
+	[IDBerater] [int] NOT NULL,
+	[Startzeit] [datetime] NOT NULL,
+	[Endzeit] [datetime] NOT NULL,
+	[ArbBeschreibung] [nvarchar](2000) NULL,
+ CONSTRAINT [PK_Zeiten] PRIMARY KEY CLUSTERED 
+(
+	[IDZeiten] ASC
+)WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Zeiten_Berater]') AND parent_object_id = OBJECT_ID(N'[dbo].[Zeiten]'))
+ALTER TABLE [dbo].[Zeiten]  WITH CHECK ADD  CONSTRAINT [FK_Zeiten_Berater] FOREIGN KEY([IDBerater])
+REFERENCES [dbo].[Berater] ([IDBerater])
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Zeiten_Projekte]') AND parent_object_id = OBJECT_ID(N'[dbo].[Zeiten]'))
+ALTER TABLE [dbo].[Zeiten]  WITH CHECK ADD  CONSTRAINT [FK_Zeiten_Projekte] FOREIGN KEY([IDProjekt])
+REFERENCES [dbo].[Projekte] ([IDProjekte])
+
+</Value>
+    </Setting>
+    <Setting Name="HeckTickConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

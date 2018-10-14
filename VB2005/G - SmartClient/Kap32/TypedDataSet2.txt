@@ -1,0 +1,29 @@
+    Private Sub btnTest2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) _ 
+                                   Handles btnTest2.Click
+
+        'Wird benötigen alle Adapter, um an die Daten heranzukommen.
+        Dim locZeitenAdapter As New HecktickDataSetTableAdapters.ZeitenTableAdapter
+        Dim locProjekteAdapter As New HecktickDataSetTableAdapters.ProjekteTableAdapter
+        Dim locBeraterAdapter As New HecktickDataSetTableAdapters.BeraterTableAdapter
+
+        'Dieses Mal verwenden wir wegen der Relation ein DataSet
+        Dim locHeckTickDataSet As New HecktickDataSet()
+        locProjekteAdapter.Fill(locHeckTickDataSet.Projekte)
+        locBeraterAdapter.Fill(locHeckTickDataSet.Berater)
+
+        'TODO: Passen Sie den Zeitbereich Ihrer Beispieldatenbank an.
+        locZeitenAdapter.FillByIDProjektUndZeitbereich(locHeckTickDataSet.Zeiten, _
+                            locHeckTickDataSet.Projekte(0).IDProjekte, _
+                            #3/15/2006#, #3/15/2006 11:59:59 PM#)
+
+        'Alle Datensätze mit Nachnamen ausgeben; die Relation zwischen Zeiten und
+        'Berater wurde einerseits durch die Verwendung eines typisierten DataSets 
+        'und andererseits durch die Erstellung der Relationen der Tabellen im SQL Server 
+        'automatisch hergestellt.
+        For Each locZeitenRow As HecktickDataSet.ZeitenRow In locHeckTickDataSet.Zeiten.Rows
+            Debug.Print(locZeitenRow.BeraterRow.Nachname & ": " & _
+                        locZeitenRow.Startzeit.ToShortDateString & " - " & _
+                        locZeitenRow.Startzeit.ToShortDateString)
+        Next
+
+    End Sub

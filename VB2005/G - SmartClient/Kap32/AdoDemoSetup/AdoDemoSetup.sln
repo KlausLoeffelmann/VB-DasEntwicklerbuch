@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ADSqlSupportComponents", "ADSqlSupportComponents\ADSqlSupportComponents.vbproj", "{C356450B-940A-4AE0-8FF3-51C57EEF52C4}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AdoDemoSetup", "AdoDemoSetup\AdoDemoSetup.vbproj", "{715CA606-44C3-45DD-946A-D5DEC0208E90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C356450B-940A-4AE0-8FF3-51C57EEF52C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C356450B-940A-4AE0-8FF3-51C57EEF52C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C356450B-940A-4AE0-8FF3-51C57EEF52C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C356450B-940A-4AE0-8FF3-51C57EEF52C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{715CA606-44C3-45DD-946A-D5DEC0208E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715CA606-44C3-45DD-946A-D5DEC0208E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715CA606-44C3-45DD-946A-D5DEC0208E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715CA606-44C3-45DD-946A-D5DEC0208E90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

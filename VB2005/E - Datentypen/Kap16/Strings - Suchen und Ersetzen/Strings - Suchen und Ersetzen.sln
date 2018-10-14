@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Strings - Suchen und Ersetzen", "Strings - Suchen und Ersetzen.vbproj", "{BB876EA5-2B0C-4800-A49D-7BB9FDF78599}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB876EA5-2B0C-4800-A49D-7BB9FDF78599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB876EA5-2B0C-4800-A49D-7BB9FDF78599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB876EA5-2B0C-4800-A49D-7BB9FDF78599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB876EA5-2B0C-4800-A49D-7BB9FDF78599}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

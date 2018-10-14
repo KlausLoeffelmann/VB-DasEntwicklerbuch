@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+
+      <!-- An dieser Stelle den Namen des Codeausschnitts einfügen: -->
+      <Title>
+        Datei-Öffnen-Dialog (erweitert)
+      </Title>
+
+    </Header>
+    <Snippet>
+
+      <Declarations>
+        <!-- An dieser Stelle folgen die Deklarationen für literale Ersetzungen -->
+        <Literal>
+          <ID>Standardfilter</ID>
+          <ToolTip>Definiert die zu verwendende Standardfilterabkürzung (z.B. *.txt).</ToolTip>
+          <Default>"*.txt"</Default>
+        </Literal>
+        <Literal>
+          <ID>Standardfiltername</ID>
+          <ToolTip>Definiert den zu verwendende Standardfilternamen (z.B. "Textdateien" für *.txt).</ToolTip>
+          <Default>"Textdateien"</Default>
+        </Literal>
+
+        <!-- An dieser Stelle folgen die Deklarationen für Objektersetzungen -->
+        <Object>
+          <ID>ÜberprüfeAufVorhandensein</ID>
+          <Type>System.Boolean</Type>
+          <ToolTip>Legt fest, ob auf Vorhandensein von Pfad und Datei geprüft werden soll.</ToolTip>
+          <Default>True</Default>
+        </Object>
+
+      </Declarations>
+
+      <!-- An dieser Stelle den Namen einer benötigten
+          Assembly-Referenz einfügen: -->
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+
+      <!-- Hier folgt die eigentliche Codedefinition: -->
+      <Code Language="VB">
+        <![CDATA[
+        Dim dateiÖffnenDialog As New OpenFileDialog
+        With dateiÖffnenDialog
+            .CheckFileExists = $ÜberprüfeAufVorhandensein$
+            .CheckPathExists = $ÜberprüfeAufVorhandensein$
+            .DefaultExt = $Standardfilter$
+            .Filter = $Standardfiltername$ & " (" & $Standardfilter$ & ")|" & $Standardfilter$ & "|Alle Dateien (*.*)|*.*"
+            Dim dialogErgebnis As DialogResult = .ShowDialog
+            If dialogErgebnis = Windows.Forms.DialogResult.Cancel Then
+                Exit Sub
+            End If
+        End With
+        ]]>
+
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

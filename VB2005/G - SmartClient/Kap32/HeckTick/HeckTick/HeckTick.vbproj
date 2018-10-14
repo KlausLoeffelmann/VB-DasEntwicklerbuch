@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BAF8191A-64A2-445C-B67E-86E854195BCA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>HeckTick.My.MyApplication</StartupObject>
+    <RootNamespace>HeckTick</RootNamespace>
+    <AssemblyName>HeckTick</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <OptionStrict>On</OptionStrict>
+    <ApplicationIcon>worker.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HeckTick.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HeckTick.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAuswertungBerater.Designer.vb">
+      <DependentUpon>frmAuswertungBerater.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuswertungBerater.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuswertungBeraterReport.Designer.vb">
+      <DependentUpon>frmAuswertungBeraterReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuswertungBeraterReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuswertungProjekte.Designer.vb">
+      <DependentUpon>frmAuswertungProjekte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuswertungProjekte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBerater.Designer.vb">
+      <DependentUpon>frmBerater.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBerater.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBeraterSuchen.Designer.vb">
+      <DependentUpon>frmBeraterSuchen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBeraterSuchen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjekte.Designer.vb">
+      <DependentUpon>frmProjekte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProjekte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmZeitErfassen.Designer.vb">
+      <DependentUpon>frmZeitErfassen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmZeitErfassen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeckTickDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HeckTickDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HeckTickDataSet.vb">
+      <DependentUpon>HeckTickDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuswertungProjekteReport.Designer.vb">
+      <DependentUpon>frmAuswertungProjekteReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuswertungProjekteReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAuswertungBerater.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAuswertungBerater.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuswertungBeraterReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAuswertungBeraterReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuswertungProjekte.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAuswertungProjekte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBerater.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBerater.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBeraterSuchen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBeraterSuchen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjekte.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProjekte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmZeitErfassen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmZeitErfassen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuswertungProjekteReport.resx">
+      <DependentUpon>frmAuswertungProjekteReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptProjekt.rdlc" />
+    <EmbeddedResource Include="rptBerater.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="HeckTickDataSet.xsc">
+      <DependentUpon>HeckTickDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HeckTickDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HeckTickDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="HeckTickDataSet.xss">
+      <DependentUpon>HeckTickDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="worker.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

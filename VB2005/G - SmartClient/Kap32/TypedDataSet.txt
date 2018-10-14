@@ -1,0 +1,51 @@
+    Private Sub btnTest_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTest.Click
+
+        'Die Definitionen für typisierte Tabellen befinden sich in der DataSet-Klasse
+        Dim locProjekteTable As New HecktickDataSet.ProjekteDataTable
+
+        'Die Definitionen für typisierte Adapter für Tabellen befinden sich in
+        'in einem separaten Namespace
+        Dim locProjekteAdapter As New HecktickDataSetTableAdapters.ProjekteTableAdapter
+
+        'Eine neue Datenzeile hinzufügen. Intellisense hilft Ihnen hier beim
+        'Finden der richtigen Parameter, weil diese Datenzeile jetzt typisiert ist.
+        locProjekteTable.AddProjekteRow("Orcas", " (VS 2007) Schreiben des Entwicklerbuchs", _
+                     #2/1/2007#, #12/31/2007#, "Büro")
+
+
+        'Eine typisierte Datenzeile deklarieren.
+        Dim locProjektRow As HecktickDataSet.ProjekteRow
+
+        'Vorteil: AddProjektRow liefert die hinzugefügte Zeile als typisierte Row zurück.
+        locProjektRow = locProjekteTable.AddProjekteRow("Katmai", _
+                            "(SQL Server 2005) Schreiben des Crash-Kurs", _
+                            #3/1/2007#, #1/31/2008#, "Büro")
+
+        'Aktualisieren funktioniert mit dem Projekte-TableAdapter.
+        locProjekteAdapter.Update(locProjekteTable)
+
+        'Bei AutoIncrement-Feldern wird automatisch dafür gesorgt,
+        'dass das Feld aktualisiert wird.
+        Dim locIDProjekte As Integer = locProjektRow.IDProjekte
+
+        MessageBox.Show("Datensätze wurden hinzugefügt. Sie können Sie im Server-Explorer betrachten!")
+
+        'Daten komplett neu einlesen
+        locProjekteTable.Clear()
+
+        'Funktioniert wie beim Adapter.
+        locProjekteAdapter.Fill(locProjekteTable)
+
+        'Die Zeile mit der entsprechenden ID finden
+        locProjektRow = locProjekteTable.FindByIDProjekte(locIDProjekte)
+
+        'Jetzt können wir die Datenfelder direkt per Eigenschaftennamen ändern,
+        'die genau so heißen, wie die Datenfelder in der Datenbank.
+        locProjektRow.Projektbeschreibung = "(SQL Server 2007) Schreiben des Crash-Kurses"
+        locProjektRow.Startzeitpunkt = #2/1/2007#
+        locProjektRow.Endzeitpunkt = #10/31/2007#
+        locProjektRow.Ausführungsort = "Ruprechts Büro"
+
+        'Tabelle aktualisieren.
+        locProjekteAdapter.Update(locProjekteTable)
+    End Sub
